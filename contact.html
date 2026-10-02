@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Sathish Manikandan M for software development and project opportunities.">
+  <meta name="author" content="Sathish Manikandan M">
+  <meta name="theme-color" content="#0f172a">
+  <title>Contact | Sathish Manikandan M</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html" aria-label="Sathish Manikandan home">SM<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="todo.html">To-Do App</a>
+        <a href="weather.html">Weather</a>
+        <a href="capstone/index.html">Capstone</a>
+        <a class="active" aria-current="page" href="contact.html">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle theme">◐</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Get In Touch</p>
+        <h1>Let's connect</h1>
+        <p>Have a project, opportunity or question? Send a message through the form below.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <aside class="contact-info" aria-labelledby="contact-info-title">
+          <p class="eyebrow">Contact Information</p>
+          <h2 id="contact-info-title">Find me online</h2>
+          <p>I am open to learning opportunities, software development projects and professional connections.</p>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/sathish-manikandan-m-b1ab09381" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/Sathish-077/" target="_blank" rel="noopener noreferrer"><span>GitHub</span><span aria-hidden="true">↗</span></a>
+            <a href="https://leetcode.com/u/Sathish077/" target="_blank" rel="noopener noreferrer"><span>LeetCode</span><span aria-hidden="true">↗</span></a>
+          </div>
+        </aside>
+
+        <section class="form-card" aria-labelledby="form-title">
+          <p class="eyebrow">Message</p>
+          <h2 id="form-title">Send a message</h2>
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Full name <span aria-hidden="true">*</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" required aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="email">Email address <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label for="message">Message <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
+            </div>
+            <button class="btn btn-primary btn-full" type="submit">Send Message</button>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>&copy; <span class="year"></span> Sathish Manikandan M. All rights reserved.</p>
+      <a href="index.html">Back to home</a>
+    </div>
+  </footer>
+</body>
+</html>

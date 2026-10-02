@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Real-time Weather Dashboard by Sathish Manikandan M using asynchronous JavaScript, the Fetch API and the Open-Meteo REST API.">
+  <meta name="author" content="Sathish Manikandan M">
+  <meta name="theme-color" content="#0f172a">
+  <title>Weather Dashboard | Sathish Manikandan M</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script src="weather.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html" aria-label="Sathish Manikandan home">SM<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="todo.html">To-Do App</a>
+        <a class="active" aria-current="page" href="weather.html">Weather</a>
+        <a href="capstone/index.html">Capstone</a>
+        <a href="contact.html">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle theme">◐</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Asynchronous JavaScript &amp; RESTful APIs</p>
+        <h1>Weather Dashboard</h1>
+        <p>Search any city to see live temperature, humidity, wind speed and a 5-day forecast. Data comes from the free Open-Meteo REST API.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <form id="weather-form" class="weather-form" novalidate>
+          <label class="sr-only" for="city-input">City name</label>
+          <input id="city-input" type="search" placeholder="Search city, e.g. Chennai" autocomplete="off" required>
+          <button class="btn btn-primary" type="submit">Search</button>
+          <button class="btn btn-secondary" type="button" id="locate-btn" title="Use my current location">📍 My location</button>
+        </form>
+
+        <div class="weather-meta">
+          <div id="recent-searches" class="recent-searches" aria-label="Recent searches"></div>
+          <div class="filter-group" role="group" aria-label="Temperature unit">
+            <button type="button" class="filter-btn is-active" data-unit="celsius" aria-pressed="true">°C</button>
+            <button type="button" class="filter-btn" data-unit="fahrenheit" aria-pressed="false">°F</button>
+          </div>
+        </div>
+
+        <p id="weather-status" class="weather-status" role="status" aria-live="polite"></p>
+
+        <div id="weather-output" class="weather-output" hidden>
+          <article class="weather-current" aria-labelledby="weather-place">
+            <div class="weather-main">
+              <div>
+                <h2 id="weather-place"></h2>
+                <p id="weather-time" class="weather-time"></p>
+                <p id="weather-desc" class="weather-desc"></p>
+              </div>
+              <div class="weather-temp-wrap">
+                <span id="weather-icon" class="weather-icon" aria-hidden="true"></span>
+                <span id="weather-temp" class="weather-temp"></span>
+              </div>
+            </div>
+            <dl class="weather-metrics">
+              <div><dt>Feels like</dt><dd id="m-feels"></dd></div>
+              <div><dt>Humidity</dt><dd id="m-humidity"></dd></div>
+              <div><dt>Wind speed</dt><dd id="m-wind"></dd></div>
+              <div><dt>Pressure</dt><dd id="m-pressure"></dd></div>
+            </dl>
+          </article>
+
+          <h3 class="forecast-title">5-Day Forecast</h3>
+          <ul id="forecast-list" class="forecast-list"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>&copy; <span class="year"></span> Sathish Manikandan M. All rights reserved.</p>
+      <a href="contact.html">Let's connect</a>
+    </div>
+  </footer>
+</body>
+</html>

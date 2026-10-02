@@ -1,0 +1,15 @@
+{
+  "name": "shopsphere-capstone",
+  "version": "1.0.0",
+  "description": "Capstone project: modular e-commerce product catalog with client-side routing",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "node scripts/build.js",
+    "preview": "npx serve dist"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}
